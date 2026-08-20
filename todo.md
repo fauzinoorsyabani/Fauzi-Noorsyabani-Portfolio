@@ -4,3 +4,6 @@
 - [x] Memeriksa tampilan warna portrait pada desktop dan menyimpan checkpoint revisi.
 - [x] Mengunggah foto event Dicoding Developer Conference sebagai aset web.
 - [x] Menambahkan foto event sebagai bukti visual pada bagian Recognition dan memeriksa responsivitasnya.
+- [x] Menilai sertifikat yang paling relevan untuk target AI Engineer, Cloud, dan Data.
+- [x] Mengunggah sertifikat terpilih serta membangun galeri Recognition interaktif.
+- [x] Menambahkan hover modern pada foto Dicoding dan memeriksa galeri pada desktop serta mobile.

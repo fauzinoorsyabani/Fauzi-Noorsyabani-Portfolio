@@ -9,6 +9,22 @@ import {
   Linkedin,
   Mail,
 } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const projectData = [
   {
@@ -109,6 +125,54 @@ const skills = [
   "Prompt Engineering",
 ];
 
+const recognitionGallery = [
+  {
+    id: "01",
+    type: "EVENT EVIDENCE",
+    title: "Dicoding Developer Conference",
+    date: "2026",
+    description:
+      "In-person event evidence, paired with 1st Place recognition in the Life After DDC Challenge.",
+    image: "/manus-storage/Fauzi_Dicoding_Developer_Conference_43657e4b.webp",
+    imageAlt: "Fauzi Noorsyabani di Dicoding Developer Conference",
+    documentHref: undefined,
+  },
+  {
+    id: "02",
+    type: "APPLIED GENAI",
+    title: "IBM Granite: Data Classification & Summarization",
+    date: "15 JUL 2025",
+    description:
+      "IBM SkillsBuild completion certificate for an applied data-classification and summarization workflow using IBM Granite.",
+    image: "/manus-storage/ibm-granite-certificate_fe95adc9.png",
+    imageAlt: "Sertifikat IBM SkillsBuild Data Classification and Summarization Using IBM Granite milik Fauzi Noorsyabani",
+    documentHref:
+      "/manus-storage/CompletionCertificate_SkillsBuild_DataClassificationandSummarizationUsingIBMGranite_8de5b6a9.pdf",
+  },
+  {
+    id: "03",
+    type: "CLOUD FOUNDATIONS",
+    title: "AWS Cloud Practitioner Essentials",
+    date: "15 APR 2024",
+    description:
+      "A 13-hour AWS-aligned cloud course covering EC2, S3, IAM, CloudWatch, pricing, and Well-Architected fundamentals.",
+    image: "/manus-storage/aws-cloud-certificate_5f323f27.png",
+    imageAlt: "Sertifikat Cloud Practitioner Essentials atau Belajar Dasar AWS Cloud milik Fauzi Noorsyabani",
+    documentHref: "/manus-storage/CloudPractitionerEssentials_BelajarDasarAWSCloud_a5640405.pdf",
+  },
+  {
+    id: "04",
+    type: "DATA OPERATIONS",
+    title: "Microsoft Office Specialist: Excel Associate",
+    date: "30 DEC 2024",
+    description:
+      "Microsoft credential for Excel Associate in Microsoft 365 Apps, supporting reliable data and reporting workflows.",
+    image: "/manus-storage/microsoft-excel-certificate_4c7aa07a.png",
+    imageAlt: "Sertifikat Microsoft Office Specialist Excel Associate milik Fauzi Noorsyabani",
+    documentHref: "/manus-storage/MicrosoftExcelAssociate_80e367c4.pdf",
+  },
+];
+
 function SideMarquee({ side }: { side: "left" | "right" }) {
   const content = ["AI ENGINEER", "SYSTEMS", "RAG", "DATA", "CLOUD", "BUILD →"];
   const items = [...content, ...content];
@@ -131,6 +195,70 @@ function SectionStamp({ index, children }: { index: string; children: React.Reac
     <div className="section-stamp">
       <span>{index}</span>
       <span>{children}</span>
+    </div>
+  );
+}
+
+function RecognitionGallery() {
+  return (
+    <div className="recognition-gallery reveal-up delay-2">
+      <div className="gallery-header">
+        <div>
+          <p className="gallery-kicker">CURATED EVIDENCE / 04</p>
+          <p className="gallery-note">
+            A selective record for AI, cloud, and data-oriented work. Drag or use the controls to explore.
+          </p>
+        </div>
+        <div className="gallery-instruction">OPEN CARD FOR DETAIL</div>
+      </div>
+
+      <Carousel opts={{ align: "start", loop: false }} className="cert-gallery">
+        <CarouselContent className="cert-gallery__content">
+          {recognitionGallery.map((item) => (
+            <CarouselItem className="cert-gallery__item" key={item.id}>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button className="evidence-card" type="button" aria-label={`Buka detail ${item.title}`}>
+                    <div className="evidence-card__image-wrap">
+                      <img src={item.image} alt={item.imageAlt} />
+                      <span className="evidence-card__number">{item.id}</span>
+                      <span className="evidence-card__view">VIEW DETAIL ↗</span>
+                    </div>
+                    <div className="evidence-card__copy">
+                      <div className="evidence-card__meta">
+                        <span>{item.type}</span>
+                        <span>{item.date}</span>
+                      </div>
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </div>
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="certificate-dialog">
+                  <DialogHeader>
+                    <DialogTitle>{item.title}</DialogTitle>
+                    <DialogDescription>{item.description}</DialogDescription>
+                  </DialogHeader>
+                  <div className="certificate-dialog__preview">
+                    <img src={item.image} alt={item.imageAlt} />
+                  </div>
+                  {item.documentHref && (
+                    <DialogFooter>
+                      <a href={item.documentHref} target="_blank" rel="noreferrer" className="certificate-source-link">
+                        OPEN ORIGINAL CERTIFICATE ↗
+                      </a>
+                    </DialogFooter>
+                  )}
+                </DialogContent>
+              </Dialog>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <div className="cert-gallery__controls">
+          <CarouselPrevious className="cert-gallery__previous" />
+          <CarouselNext className="cert-gallery__next" />
+        </div>
+      </Carousel>
     </div>
   );
 }
@@ -335,20 +463,6 @@ export default function Home() {
           <div className="achievement-grid">
             <div className="achievement-lead reveal-up">
               <h2>Recognition earned through <span className="accent-word">applied practice.</span></h2>
-              <figure className="achievement-event-photo">
-                <div className="event-photo-mark" aria-hidden="true">
-                  <span>DDC</span>
-                  <span>01 / 2026</span>
-                </div>
-                <img
-                  src="/manus-storage/Fauzi_Dicoding_Developer_Conference_43657e4b.webp"
-                  alt="Fauzi Noorsyabani di Dicoding Developer Conference"
-                />
-                <figcaption>
-                  <span>Photo evidence / Dicoding Developer Conference</span>
-                  <span>Indonesia</span>
-                </figcaption>
-              </figure>
             </div>
             <div className="achievement-list reveal-up delay-1">
               <p>
@@ -365,6 +479,7 @@ export default function Home() {
               </p>
             </div>
           </div>
+          <RecognitionGallery />
         </section>
 
         <section className="contact-section" id="contact">
