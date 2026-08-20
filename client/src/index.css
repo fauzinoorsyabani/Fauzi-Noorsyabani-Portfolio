@@ -155,7 +155,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .accent-word { font-style: normal; font-weight: 500; letter-spacing: -.075em; position: relative; white-space: nowrap; }
 .accent-word::after { content:""; position:absolute; height:2px; left:3%; right:3%; bottom:-.08em; background:var(--ink); opacity:.25; }
 .hero-portrait { grid-column: 2; grid-row: 2; align-self: end; position: relative; width: min(100%, 510px); margin-top: 35px; }
-.hero-portrait img { display: block; width: 100%; aspect-ratio: 1.06 / 1; object-fit: cover; object-position: 50% 28%; filter: grayscale(1) contrast(1.03); mix-blend-mode: multiply; }
+.hero-portrait img { display: block; width: 100%; aspect-ratio: 1.06 / 1; object-fit: cover; object-position: 50% 28%; filter: none; mix-blend-mode: normal; }
 .hero-portrait::after { content:""; position:absolute; inset:0; border: 1px solid rgba(23,23,23,.12); pointer-events:none; }
 .portrait-stamp { position: absolute; z-index: 1; top: 14px; left: 14px; color: white; mix-blend-mode: difference; display: flex; gap: 17px; font-family: "DM Mono", monospace; font-size: 10px; letter-spacing: .08em; }
 .portrait-caption { display: flex; position: absolute; right: -6px; bottom: 8px; color: white; writing-mode: vertical-rl; transform: rotate(180deg); mix-blend-mode: difference; }
