@@ -333,7 +333,23 @@ export default function Home() {
         <section className="achievement-section">
           <SectionStamp index="05">RECOGNITION</SectionStamp>
           <div className="achievement-grid">
-            <h2 className="reveal-up">Recognition earned through <span className="accent-word">applied practice.</span></h2>
+            <div className="achievement-lead reveal-up">
+              <h2>Recognition earned through <span className="accent-word">applied practice.</span></h2>
+              <figure className="achievement-event-photo">
+                <div className="event-photo-mark" aria-hidden="true">
+                  <span>DDC</span>
+                  <span>01 / 2026</span>
+                </div>
+                <img
+                  src="/manus-storage/Fauzi_Dicoding_Developer_Conference_43657e4b.webp"
+                  alt="Fauzi Noorsyabani di Dicoding Developer Conference"
+                />
+                <figcaption>
+                  <span>Photo evidence / Dicoding Developer Conference</span>
+                  <span>Indonesia</span>
+                </figcaption>
+              </figure>
+            </div>
             <div className="achievement-list reveal-up delay-1">
               <p>
                 <span>2026</span> 1st Place — Life After DDC Challenge, Dicoding Developer Conference
