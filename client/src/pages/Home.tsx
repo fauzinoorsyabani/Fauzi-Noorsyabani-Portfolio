@@ -38,7 +38,7 @@ const projectData = [
     evidence:
       "Led a five-person cross-functional team through more than 900 hours of structured product development.",
     flow: ["FORECAST", "ANOMALY", "REORDER"],
-    image: "/manus-storage/fauzi-system-grid_a6d0fb6b.png",
+    image: "/assets/fauzi-system-grid.webp",
     imageAlt: "Abstract modular system grid representing the PolaStok platform",
   },
   {
@@ -52,7 +52,7 @@ const projectData = [
     evidence:
       "Integrated Whisper and GPT-4 through a FastAPI backend, then containerized and deployed it on AWS EC2.",
     flow: ["AUDIO", "EXTRACT", "DOCUMENT"],
-    image: "/manus-storage/fauzi-data-geometry_c0cf30f1.png",
+    image: "/assets/fauzi-data-geometry.webp",
     imageAlt: "Abstract translucent data pipeline geometry representing ClinicalNote AI",
   },
   {
@@ -66,7 +66,7 @@ const projectData = [
     evidence:
       "Built as a FastAPI streaming microservice with a Streamlit chat interface and conversation memory.",
     flow: ["RETRIEVE", "CITE", "RESPOND"],
-    image: "/manus-storage/fauzi-cloud-lattice_483a3832.png",
+    image: "/assets/fauzi-cloud-lattice.webp",
     imageAlt: "Abstract woven cloud topology representing the AI Study Assistant",
   },
   {
@@ -80,7 +80,7 @@ const projectData = [
     evidence:
       "Processed 838,566 employee reviews during the IBM SkillsBuild × Hacktiv8 capstone.",
     flow: ["CLEAN", "CLASSIFY", "SUMMARIZE"],
-    image: "/manus-storage/fauzi-system-grid_a6d0fb6b.png",
+    image: "/assets/fauzi-system-grid.webp",
     imageAlt: "Abstract modular system grid representing an analytics processing pipeline",
   },
 ];
@@ -133,7 +133,7 @@ const recognitionGallery = [
     date: "2026",
     description:
       "In-person event evidence, paired with 1st Place recognition in the Life After DDC Challenge.",
-    image: "/manus-storage/Fauzi_Dicoding_Developer_Conference_43657e4b.webp",
+    image: "/assets/fauzi-dicoding-conference.webp",
     imageAlt: "Fauzi Noorsyabani di Dicoding Developer Conference",
     documentHref: undefined,
   },
@@ -144,10 +144,9 @@ const recognitionGallery = [
     date: "15 JUL 2025",
     description:
       "IBM SkillsBuild completion certificate for an applied data-classification and summarization workflow using IBM Granite.",
-    image: "/manus-storage/ibm-granite-certificate_fe95adc9.png",
+    image: "/assets/ibm-granite-certificate.png",
     imageAlt: "Sertifikat IBM SkillsBuild Data Classification and Summarization Using IBM Granite milik Fauzi Noorsyabani",
-    documentHref:
-      "/manus-storage/CompletionCertificate_SkillsBuild_DataClassificationandSummarizationUsingIBMGranite_8de5b6a9.pdf",
+    documentHref: "/assets/ibm-granite-certificate.pdf",
   },
   {
     id: "03",
@@ -156,9 +155,9 @@ const recognitionGallery = [
     date: "15 APR 2024",
     description:
       "A 13-hour AWS-aligned cloud course covering EC2, S3, IAM, CloudWatch, pricing, and Well-Architected fundamentals.",
-    image: "/manus-storage/aws-cloud-certificate_5f323f27.png",
+    image: "/assets/aws-cloud-practitioner.png",
     imageAlt: "Sertifikat Cloud Practitioner Essentials atau Belajar Dasar AWS Cloud milik Fauzi Noorsyabani",
-    documentHref: "/manus-storage/CloudPractitionerEssentials_BelajarDasarAWSCloud_a5640405.pdf",
+    documentHref: "/assets/aws-cloud-practitioner.pdf",
   },
   {
     id: "04",
@@ -167,9 +166,9 @@ const recognitionGallery = [
     date: "30 DEC 2024",
     description:
       "Microsoft credential for Excel Associate in Microsoft 365 Apps, supporting reliable data and reporting workflows.",
-    image: "/manus-storage/microsoft-excel-certificate_4c7aa07a.png",
+    image: "/assets/microsoft-excel-associate.png",
     imageAlt: "Sertifikat Microsoft Office Specialist Excel Associate milik Fauzi Noorsyabani",
-    documentHref: "/manus-storage/MicrosoftExcelAssociate_80e367c4.pdf",
+    documentHref: "/assets/microsoft-excel-associate.pdf",
   },
 ];
 
@@ -272,7 +271,7 @@ export default function Home() {
 
       <header className="topbar">
         <a className="brand-lockup" href="#top" aria-label="Fauzi Noorsyabani — kembali ke atas">
-          <img src="/manus-storage/fauzi-n-logo_36c3f3ee.png" alt="" />
+          <img src="/assets/fauzi-n-logo.webp" alt="" />
           <span>
             FAUZI <b>/</b> NOORSYABANI
           </span>
@@ -310,7 +309,7 @@ export default function Home() {
               <span>01</span>
             </div>
             <img
-              src="/manus-storage/FauziNoorsyabani_Office_61ca17cb.jpg"
+              src="/assets/fauzi-office.jpg"
               alt="Fauzi Noorsyabani mengenakan blazer hitam di ruang kerja modern"
             />
             <div className="portrait-caption">AI / DATA / CLOUD</div>
@@ -318,7 +317,7 @@ export default function Home() {
           <aside className="hero-note reveal-up delay-2">
             <div className="note-number">PROFILE / 01</div>
             <div className="note-brand-mark" aria-hidden="true">
-              <img src="/manus-storage/fauzi-n-logo_36c3f3ee.png" alt="" />
+              <img src="/assets/fauzi-n-logo.webp" alt="" />
               <span>THREE RAILS / ONE SYSTEM</span>
             </div>
             <p>
@@ -438,7 +437,7 @@ export default function Home() {
         <section className="systems-section">
           <div className="systems-art reveal-up">
             <img
-              src="/manus-storage/fauzi-data-geometry_c0cf30f1.png"
+              src="/assets/fauzi-data-geometry.webp"
               alt="Komposisi abstrak modul data berlapis"
             />
             <span>BUILT TO CONNECT</span>
@@ -502,7 +501,7 @@ export default function Home() {
                 <a href="https://www.linkedin.com/in/fauzinoorsyabani/" target="_blank" rel="noreferrer">
                   <Linkedin size={16} /> LinkedIn
                 </a>
-                <a href="/manus-storage/FauziNoorsyabani_CV_e5215f41.pdf" target="_blank" rel="noreferrer">
+                <a href="/assets/fauzi-cv.pdf" target="_blank" rel="noreferrer">
                   <Download size={16} /> Download CV
                 </a>
                 <a href="mailto:fauzinoorsyabani05@gmail.com">
